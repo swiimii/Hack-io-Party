@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Level State is an abstract class, whose child classes can be used to 
@@ -13,8 +14,10 @@ public abstract class LevelState : MonoBehaviour
     /// which will either show success status. Will probably
     /// be the same for every level, and tracked via prefab.
     /// </summary>
-    public GameObject victoryScreen, failureScreen;
-    
+    public GameObject victoryScreen, failureScreen, timerCanvas;
+
+    public Text timerComponent;
+
     /// <summary>
     /// For tracking time within level. Tracked via Coroutine in Start function.
     /// </summary>
@@ -38,9 +41,9 @@ public abstract class LevelState : MonoBehaviour
         StartCoroutine(StartTimer());
     }
 
-    public bool CheckVictory()
+    public virtual bool CheckVictory()
     {
-        if (IsAtTargetState())
+        if (IsAtTargetState() && !isFailed)
         {
             WinLevel();
             StartCoroutine(StartRandomLevel());
@@ -63,24 +66,29 @@ public abstract class LevelState : MonoBehaviour
         {
             yield return null;
             timeElapsed += Time.deltaTime;
+            timerComponent.text = (Mathf.Max(timeLimit - timeElapsed, 0)).ToString("F1");
             if (timeElapsed > timeLimit)
             {
-                isFailed = true;
                 if (!CheckVictory() && !isWon)
                 {
+                    isFailed = true;
                     FailLevel();
                 }
+            }
+            if (isWon)
+            {
+                break;
             }
         }
     }
 
-    public void FailLevel()
+    public virtual void FailLevel()
     {
         isFailed = true;
         failureScreen.SetActive(true);
     }
 
-    public void WinLevel()
+    public virtual void WinLevel()
     {
         isWon = true;
         victoryScreen.SetActive(true);
