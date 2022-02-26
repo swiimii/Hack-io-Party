@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
         //direction = Random.value > 0.5 ? -1 : 1;
         direction = 1;
 
-        transform.position = new Vector3(-9 * direction, Random.Range(0.0f, 5.0f));
+        transform.Translate(new Vector3(-10 * direction, 0));
 
         speed = Random.Range(1, 10);
     }
@@ -24,6 +24,16 @@ public class Enemy : MonoBehaviour
     {
 
         transform.Translate(new Vector2(direction * speed * 0.5f * Time.deltaTime, 0));
+        if (IsOutOfScreenspace())
+        {
+            transform.Translate(new Vector2(-20, 0));
+            speed = Random.Range(1, 10);
+        }
+    }
+
+    public void SetRow(int row)
+    {
+        transform.Translate(new Vector2(0, 100*row));
     }
 
     public bool IsOutOfScreenspace()

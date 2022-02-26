@@ -12,8 +12,16 @@ public class Balloon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var input = Input.GetAxisRaw("Vertical") * Time.deltaTime;
-        transform.Translate(new Vector3(0, input));
+        
+        if (transform.position.y < 12) 
+        {
+            var input = Input.GetAxisRaw("Vertical") * 3 * Time.deltaTime;
+            transform.Translate(new Vector3(0, input));
+        }
+        else
+        {
+            transform.Translate(new Vector3(0, 0.05f));
+        }
 
     }
 }
