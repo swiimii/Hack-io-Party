@@ -6,39 +6,38 @@ public class MainMenuController : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject optionsMenu;
-    public GameObject targetLocation;
+    public Transform topTarget;
+    public Transform centerTarget;
+    public Transform bottomTarget;
 
     public float menuMoveSpeed = 10;
 
     bool toMainMenu = false;
     bool toOptions = false;
 
-    Vector3 mainMenuTargetEnter = new Vector3(0, 340, 0);
-    Vector3 optionsMenuTargetEnter = new Vector3(0, 0, 0);
-    Vector3 mainMenuTargetExit = new Vector3(0, 1300, 0);
-    Vector3 optionsMenuTargetExit = new Vector3(0, -1000, 0);
-
     private void FixedUpdate()
     {
         float step = menuMoveSpeed * Time.deltaTime;
         if (toMainMenu)
         {
-            mainMenu.transform.position = Vector3.MoveTowards(mainMenu.transform.position, targetLocation.transform.position, step);
-            optionsMenu.transform.position = Vector3.MoveTowards(optionsMenu.transform.position, optionsMenuTargetExit, step);
-            if (mainMenu.transform.position == targetLocation.transform.position && optionsMenu.transform.position == optionsMenuTargetExit)
+            mainMenu.transform.position = Vector3.MoveTowards(mainMenu.transform.position, centerTarget.position, step);
+            optionsMenu.transform.position = Vector3.MoveTowards(optionsMenu.transform.position, bottomTarget.position, step);
+            if (mainMenu.transform.position == centerTarget.position && optionsMenu.transform.position == bottomTarget.position)
             {
                 optionsMenu.SetActive(false);
                 toMainMenu = false;
+                Debug.Log("toMainMenu = false");
             }
         }
         else if (toOptions)
         {
-            mainMenu.transform.position = Vector3.MoveTowards(mainMenu.transform.position, mainMenuTargetExit, step);
-            optionsMenu.transform.position = Vector3.MoveTowards(optionsMenu.transform.position, targetLocation.transform.position, step);
-            if (mainMenu.transform.position == mainMenuTargetExit && optionsMenu.transform.position == targetLocation.transform.position)
+            mainMenu.transform.position = Vector3.MoveTowards(mainMenu.transform.position, topTarget.position, step);
+            optionsMenu.transform.position = Vector3.MoveTowards(optionsMenu.transform.position, centerTarget.position, step);
+            if (mainMenu.transform.position == topTarget.position && optionsMenu.transform.position == centerTarget.position)
             {
                 mainMenu.SetActive(false);
                 toOptions = false;
+                Debug.Log("toOptions = false");
             }
         }
     }
@@ -54,6 +53,7 @@ public class MainMenuController : MonoBehaviour
         if (toMainMenu == false)
         {
             toOptions = true;
+            Debug.Log("toOptions = true");
         }
     }
 
@@ -83,6 +83,7 @@ public class MainMenuController : MonoBehaviour
         if (toOptions == false)
         {
             toMainMenu = true;
+            Debug.Log("toMainMenu = true");
         }
     }
 }
