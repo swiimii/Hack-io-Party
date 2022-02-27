@@ -180,6 +180,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
+--- !u!1 &75487249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7503804423987965717, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
+  m_PrefabInstance: {fileID: 75487248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &75487250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3311751829528185784, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
+  m_PrefabInstance: {fileID: 75487248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,11 +286,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &545468982 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7735538315718554681, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
-  m_PrefabInstance: {fileID: 75487248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649291905
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,11 +421,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.4
---- !u!1 &734405055 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7735538315752017879, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
-  m_PrefabInstance: {fileID: 75487248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &795177156 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7735538317271554181, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
@@ -461,8 +461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89789959b5311a4193db4e3e895f2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryScreen: {fileID: 545468982}
-  failureScreen: {fileID: 734405055}
+  victoryScreen: {fileID: 75487250}
+  failureScreen: {fileID: 75487249}
   timerCanvas: {fileID: 2126056701}
   timerComponent: {fileID: 795177156}
   timeLimit: 15
