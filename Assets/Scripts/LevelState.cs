@@ -95,4 +95,9 @@ public abstract class LevelState : MonoBehaviour
         victoryScreen.SetActive(true);
     }
 
+    public void ReturnToMainMenu()
+    {
+        GameTools.LoadScene("MainMenu");
+    }
+
 }
