@@ -20,7 +20,7 @@ public class GameTools
     public static void LoadRandomNewLevel()
     {
         var thisLevel = SceneManager.GetActiveScene().buildIndex;
-        var randomlySelectedLevel = (int)(Random.value * (lastLevel - firstLevel));
+        var randomlySelectedLevel = (int)(Random.value * (lastLevel - firstLevel) + 1);
 
         // This prevents the currently selected level from being chosen,
         // but also allows every level to have an equal chance of being chosen
