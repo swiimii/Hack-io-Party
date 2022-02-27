@@ -29,18 +29,25 @@ public class Balloon : MonoBehaviour
         {
             if (!_dead)
             {
-                var input = Input.GetAxisRaw("Vertical") * 3 * Time.deltaTime;
-                transform.Translate(new Vector3(0, input));
+                var input = Input.GetAxisRaw("Vertical");
+                var cc = FindObjectOfType<CustomController>();
+                if (cc.green.isActive || cc.red.isActive)
+                {
+                    input = 0f;
+                    if (cc.green.isActive) input += 1;
+                    if (cc.red.isActive) input -= 1;
+                }
+                transform.Translate(new Vector3(0, input * 3 * Time.deltaTime));
 
             }
             else
             {
-                transform.Translate(new Vector3(0, -0.01f));
+                transform.Translate(Vector2.down * 4 * Time.deltaTime);
             }
         }
         else
         {
-            transform.Translate(new Vector3(0, 0.01f));
+            transform.Translate(Vector2.up * 4 * Time.deltaTime);
         }
 
     }
