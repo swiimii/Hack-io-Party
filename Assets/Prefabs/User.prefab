@@ -128,7 +128,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   level: {fileID: 0}
-  jumpHeightVelocity: 7.5
+  jumpHeightVelocity: 8
 --- !u!50 &6273387359836044767
 Rigidbody2D:
   serializedVersion: 4
