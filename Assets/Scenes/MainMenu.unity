@@ -855,7 +855,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hack-io-Party
+  m_Text: Hack-io Party
 --- !u!222 &314866764
 CanvasRenderer:
   m_ObjectHideFlags: 0
