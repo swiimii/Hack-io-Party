@@ -15,7 +15,7 @@ namespace Assets.Scripts.SceneScripts.Level1
         public override bool IsAtTargetState()
         {
 
-            return balloonObject.GetComponent<Balloon>().transform.position.y > 25;
+            return balloonObject.GetComponent<Balloon>().transform.position.y > 14;
         }
     }
 }
