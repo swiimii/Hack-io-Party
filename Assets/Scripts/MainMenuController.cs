@@ -7,6 +7,19 @@ public class MainMenuController : MonoBehaviour
     public GameObject mainMenu;
     public GameObject optionsMenu;
 
+    private void Update()
+    {
+        var cc = FindObjectOfType<CustomController>();
+        if (cc.red.wasTriggerdThisFrame)
+        {
+            ExitGame();
+        }
+        if (cc.green.wasTriggerdThisFrame)
+        {
+            PlayGame();
+        }
+    }
+
     public void PlayGame()
     {
         GameTools.LoadRandomNewLevel();

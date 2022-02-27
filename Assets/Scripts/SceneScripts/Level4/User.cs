@@ -24,6 +24,13 @@ public class User : MonoBehaviour
 
         // Horizontal movement
         var xInput = Input.GetAxisRaw("Horizontal");
+        var cc = FindObjectOfType<CustomController>();
+        if (cc.blue.isActive || cc.green.isActive)
+        {
+            xInput = 0;
+            if (cc.blue.isActive) xInput += 1;
+            if (cc.green.isActive) xInput -= 1;
+        }
 
         if (xInput != 0)
         {
@@ -41,7 +48,10 @@ public class User : MonoBehaviour
         }
 
         // Jumping
-        if(Input.GetAxisRaw("Vertical") > 0 && IsGrounded())
+        var yInput = Input.GetAxisRaw("Vertical");
+        if (cc.yellow.isActive) yInput = 1;
+
+        if ( yInput > 0 && IsGrounded())
         {
             body.velocity = new Vector2(body.velocity.x, jumpHeightVelocity);
         }
