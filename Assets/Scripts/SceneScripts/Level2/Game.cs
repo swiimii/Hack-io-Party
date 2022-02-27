@@ -74,7 +74,8 @@ public class Game : LevelState
                     }
                 }
             }
-            if (trafficState == 1 && Input.GetKeyDown(KeyCode.Space)) // Activate on red light; win
+            var cc = FindObjectOfType<CustomController>();
+            if (trafficState == 1 && (Input.GetKeyDown(KeyCode.Space) || cc.red.wasTriggerdThisFrame)) // Activate on red light; win
             {
                 if (!isFailed)
                 {
@@ -82,7 +83,7 @@ public class Game : LevelState
                     StartCoroutine(StartRandomLevel());
                 }
             }
-            else if (trafficState != 1 && Input.GetKeyDown(KeyCode.Space)) // Activate after red light; lose
+            else if (trafficState != 1 && (Input.GetKeyDown(KeyCode.Space) || cc.red.wasTriggerdThisFrame)) // Activate after red light; lose
             {
                 if (!isWon)
                 {
