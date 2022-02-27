@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd50e93f714321748a547a289b39b985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryScreen: {fileID: 1982042127}
-  failureScreen: {fileID: 1714515848}
+  victoryScreen: {fileID: 1251466827}
+  failureScreen: {fileID: 1744298071}
   timerCanvas: {fileID: 367027073}
   timerComponent: {fileID: 1043119206}
   timeLimit: 15
@@ -569,6 +569,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1251466827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3311751829528185784, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
+  m_PrefabInstance: {fileID: 452853899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1333312754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -889,14 +894,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1714515848 stripped
+--- !u!1 &1744298071 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7735538315752017879, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
-  m_PrefabInstance: {fileID: 452853899}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1982042127 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7735538315718554681, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7503804423987965717, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
   m_PrefabInstance: {fileID: 452853899}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1986299150
