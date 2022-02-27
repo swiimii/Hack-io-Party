@@ -59,7 +59,7 @@ public class Game : LevelState
                         case 0:
                             trafficOff.SetActive(true);
                             //explosion noise here
-                            explosion.transform.position = new Vector3(car.transform.position.x, explosion.transform.position.y, explosion.transform.position.z);
+                            explosion.SetActive(true);
                             break;
                     }
 
