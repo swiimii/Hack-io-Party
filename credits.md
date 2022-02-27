@@ -14,7 +14,7 @@ https://freesound.org/people/etcd_09/sounds/435497/ (Attribution)
  - Explosion:
 https://freesound.org/people/Iwiploppenisse/sounds/156031/ (Attribution)
  - Music:
-[Royalty Free Music from Bensound](https://www.bensound.com/)
+[Royalty Free Music from Bensound](https://www.bensound.com/) (Attribution)
 
 
 ## Art
