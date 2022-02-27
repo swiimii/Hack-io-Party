@@ -11,7 +11,6 @@ namespace Assets.Scripts.SceneScripts.Level1
     {
         public GameObject balloonObject;
 
-
         public override bool IsAtTargetState()
         {
 
