@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 684950175}
   - component: {fileID: 684950174}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -832,6 +832,7 @@ MonoBehaviour:
   timeElapsed: 0
   isFailed: 0
   isWon: 0
+  highlightObject: {fileID: 684950172}
   buttonHighlightLocations:
   - {fileID: 1485729032}
   - {fileID: 453725235}

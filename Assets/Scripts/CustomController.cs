@@ -6,10 +6,12 @@ using System.IO.Ports;
 public class CustomController : MonoBehaviour
 {
     // change your serial port
-    public string port = "COM3";
+    public string port => PlayerPrefs.GetString("Name", "COM3");
     SerialPort sp;
 
-    public SerialState red, green, yellow, blue, motion;
+    public SerialState red = new SerialState(), 
+        green = new SerialState(), yellow = new SerialState(), 
+        blue = new SerialState(), motion = new SerialState();
 
     private void Start()
     {
@@ -41,8 +43,13 @@ public class CustomController : MonoBehaviour
             }
             catch (System.Exception)
             {
-
+                Debug.LogError("Error encountered while parsing input");
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        sp.Close();
     }
 }
