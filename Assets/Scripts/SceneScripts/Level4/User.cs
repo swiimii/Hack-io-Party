@@ -53,6 +53,7 @@ public class User : MonoBehaviour
 
         if ( yInput > 0 && IsGrounded())
         {
+            GetComponent<AudioSource>().Play();
             body.velocity = new Vector2(body.velocity.x, jumpHeightVelocity);
         }
 
