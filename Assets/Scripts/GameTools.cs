@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameTools
 {
-    public static int firstLevel = 1, lastLevel = 4;
+    public static int firstLevel = 1;
+    public static int lastLevel => SceneManager.sceneCountInBuildSettings - 1;
     public static int score = 0;
 
     public static void LoadScene(string sceneName)
