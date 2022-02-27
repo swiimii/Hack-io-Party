@@ -16,7 +16,7 @@ public class FailureScreen : MonoBehaviour
     void Update()
     {
         var cc = FindObjectOfType<CustomController>();
-        if (cc.red.wasTriggerdThisFrame)
+        if (cc.yellow.wasTriggerdThisFrame)
         {
             GameTools.LoadScene("MainMenu");
         }
