@@ -27,6 +27,7 @@ public abstract class LevelState : MonoBehaviour
     /// Use to prevent overlapping of victoryScreen and failureScreen.
     /// </summary>
     public bool isFailed = false, isWon = false;
+    public bool disableTimer = false;
     
     private const float delayBetweenLevels = 2f;
 
@@ -38,7 +39,7 @@ public abstract class LevelState : MonoBehaviour
 
     protected virtual void Start()
     {
-        StartCoroutine(StartTimer());
+        if (!disableTimer) StartCoroutine(StartTimer());
     }
 
     public virtual bool CheckVictory()
