@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
         if (IsOutOfScreenspace())
         {
             transform.Translate(new Vector2(-20, 0));
-            speed = Random.Range(1, 10);
+            speed = Random.Range(1, 15);
         }
     }
 
