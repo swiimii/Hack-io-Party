@@ -6,7 +6,7 @@ using System.IO.Ports;
 public class CustomController : MonoBehaviour
 {
     // change your serial port
-    public string port => PlayerPrefs.GetString("Name", "COM3");
+    public string port => PlayerPrefs.GetString("Port", "COM3");
     SerialPort sp;
 
     public SerialState red = new SerialState(), 
@@ -45,6 +45,21 @@ public class CustomController : MonoBehaviour
             {
                 Debug.LogError("Error encountered while parsing input");
             }
+        }
+    }
+
+    public void Reconnect()
+    {
+        sp.Close();
+        sp = new SerialPort(port, 9600);
+        try
+        {
+            sp.Open();
+            sp.ReadTimeout = 100; // In my case, 100 was a good amount to allow quite smooth transition. 
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Custom controller not connected on " + port);
         }
     }
 

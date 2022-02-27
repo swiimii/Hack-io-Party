@@ -25,6 +25,7 @@ public class Flag : MonoBehaviour
         // The only thing that is possible to collide is the user
         var lvl = level.GetComponent<Level4>();
         lvl.WinLevel();
+        lvl.StartCoroutine(lvl.StartRandomLevel());
     }
 
 }

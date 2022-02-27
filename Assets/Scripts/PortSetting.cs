@@ -24,6 +24,8 @@ public class PortSetting : MonoBehaviour
             PlayerPrefs.Save();
             previewText.text = userInput.text.Trim();
             userInput.text = "";
+            var cc = FindObjectOfType<CustomController>();
+            cc.Reconnect();
         }
     }
 }
