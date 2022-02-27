@@ -1,4 +1,5 @@
 using Assets.Scripts.SceneScripts.Level4;
+using Assets.Scripts.SceneScripts.Level5;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class User : MonoBehaviour
 {
     public LayerMask groundLayer;
     public GameObject level;
+    public float jumpHeightVelocity = 7.5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,12 +53,12 @@ public class User : MonoBehaviour
 
         if ( yInput > 0 && IsGrounded())
         {
-            body.velocity = new Vector2(body.velocity.x, 7.5f);
+            body.velocity = new Vector2(body.velocity.x, jumpHeightVelocity);
         }
 
         if(transform.position.y < -5)
         {
-            var lvl = level.GetComponent<Level4>();
+            var lvl = level.GetComponent<LevelState>();
             if (!lvl.isWon)
             {
                 lvl.FailLevel();
@@ -68,7 +71,7 @@ public class User : MonoBehaviour
     {
         Vector2 position = transform.position;
         Vector2 direction = Vector2.down;
-        float distance = 0.75f;
+        float distance = 0.5f;
 
         Debug.DrawRay(position, direction, Color.green);
         RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, groundLayer);
