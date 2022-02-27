@@ -14,8 +14,17 @@ public class Camera : MonoBehaviour
     void Update()
     {
 
-        var input = Input.GetAxisRaw("Vertical") * 2 * Time.deltaTime;
-        transform.Translate(new Vector3(0, input));
+        var input = Input.GetAxisRaw("Vertical");
+        if (FindObjectOfType<CustomController>().green.isActive)
+        {
+            input = 1;
+        }
+        if (FindObjectOfType<CustomController>().red.isActive)
+        {
+            input = Mathf.Max(input - 1, -1);
+        }
+
+        transform.Translate(new Vector3(0, input * 2 * Time.deltaTime));
 
     }
 }

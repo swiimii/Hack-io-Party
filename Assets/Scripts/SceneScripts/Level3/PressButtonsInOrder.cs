@@ -80,6 +80,7 @@ public class PressButtonsInOrder : LevelState
 
     public IEnumerator ShowPattern()
     {
+        yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(.5f);
         for (var i = 0; i < correctSequence.Count; i++)
         {
