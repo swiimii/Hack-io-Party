@@ -57,8 +57,7 @@ public abstract class LevelState : MonoBehaviour
     public IEnumerator StartRandomLevel()
     {
         yield return new WaitForSeconds(delayBetweenLevels);
-        var randomlySelectedLevel = (int)(Random.value * (GameTools.lastLevel - GameTools.firstLevel)) + GameTools.firstLevel;
-        GameTools.LoadLevel(randomlySelectedLevel);
+        GameTools.LoadRandomNewLevel();
     }
 
     public IEnumerator StartTimer()
