@@ -9,7 +9,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        GameTools.LoadRandomNewLevel();
     }
 
     public void Options()
