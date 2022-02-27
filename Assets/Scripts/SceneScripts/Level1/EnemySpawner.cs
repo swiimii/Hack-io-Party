@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < numEnemies; ++i)
         {
-            var newEnemy = Instantiate(enemyPrefab, new Vector3(0.0f, i * 0.5f, 0.0f), Quaternion.identity).GetComponent<Enemy>();
+            var newEnemy = Instantiate(enemyPrefab, new Vector3(0.0f, i * 1.0f, 0.0f), Quaternion.identity).GetComponent<Enemy>();
             //newEnemy.SetRow(i + 1);
             enemies.Add(newEnemy);
 

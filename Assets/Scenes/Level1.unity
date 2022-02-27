@@ -228,8 +228,8 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.14509805, g: 0.26666668, b: 0.25490198, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
   failureScreen: {fileID: 734405055}
   timerCanvas: {fileID: 2126056701}
   timerComponent: {fileID: 795177156}
-  timeLimit: 12
+  timeLimit: 15
   timeElapsed: 0
   isFailed: 0
   isWon: 0
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e867e3b0125d404f91f7b6ddba33699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numEnemies: 20
+  numEnemies: 15
   enemyPrefab: {fileID: 875953473596629127, guid: bb7877996ab89b74c964c68524848266, type: 3}
 --- !u!1 &2126056701 stripped
 GameObject:
