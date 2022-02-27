@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameTools
 {
     public static int firstLevel = 1, lastLevel = 3;
+    public static int score = 0;
 
     public static void LoadScene(string sceneName)
     {

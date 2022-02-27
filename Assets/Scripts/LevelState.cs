@@ -71,7 +71,6 @@ public abstract class LevelState : MonoBehaviour
             {
                 if (!CheckVictory() && !isWon)
                 {
-                    isFailed = true;
                     FailLevel();
                 }
             }
@@ -85,11 +84,21 @@ public abstract class LevelState : MonoBehaviour
     public virtual void FailLevel()
     {
         isFailed = true;
+        if (!PlayerPrefs.HasKey("HighScore"))
+        {
+            PlayerPrefs.SetInt("HighScore", 0);
+        }
+        PlayerPrefs.SetInt("HighScore", Mathf.Max(PlayerPrefs.GetInt("HighScore"), GameTools.score));
+        PlayerPrefs.SetInt("LatestScore", GameTools.score);
+        GameTools.score = 0;
+        PlayerPrefs.Save();
         failureScreen.SetActive(true);
     }
 
     public virtual void WinLevel()
     {
+        if (!isWon && !isFailed)
+            GameTools.score++;
         isWon = true;
         victoryScreen.SetActive(true);
     }
