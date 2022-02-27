@@ -468,6 +468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7735538316310502610}
   - component: {fileID: 7735538316310502621}
+  - component: {fileID: 4969694825688744531}
   m_Layer: 0
   m_Name: LevelFrameworkObject
   m_TagString: Untagged
@@ -499,7 +500,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7735538316310502611}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0553fd2c30e8ff54ead47e933c8f61a1, type: 3}
   m_Name: 
@@ -512,6 +513,18 @@ MonoBehaviour:
   timeElapsed: 0
   isFailed: 0
   isWon: 0
+--- !u!114 &4969694825688744531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735538316310502611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f0b969a5b692c4b8e8df5acb90c3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7735538317271554203
 GameObject:
   m_ObjectHideFlags: 0
