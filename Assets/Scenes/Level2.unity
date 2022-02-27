@@ -198,6 +198,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120823020}
   m_CullTransparentMesh: 1
+--- !u!1 &208735768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7735538315752017879, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
+  m_PrefabInstance: {fileID: 7735538317289095669}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &216274950
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +278,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216274950}
   m_CullTransparentMesh: 1
+--- !u!1 &235809963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7735538315881793538, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
+  m_PrefabInstance: {fileID: 7735538317289095669}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &720486708
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +366,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &875329674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7735538315718554681, guid: 61ace0574f61d8d4bb00e7c022414279, type: 3}
+  m_PrefabInstance: {fileID: 7735538317289095669}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &968714050
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +619,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b702c4e0054c84b46bb0ac5c79fa0cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  victoryScreen: {fileID: 875329674}
+  failureScreen: {fileID: 208735768}
+  timerCanvas: {fileID: 235809963}
+  timerComponent: {fileID: 0}
+  timeLimit: 8
+  timeElapsed: 0
+  isFailed: 0
+  isWon: 0
+  disableTimer: 1
   trafficOff: {fileID: 1198866212}
   trafficRed: {fileID: 968714050}
   trafficYellow: {fileID: 216274950}
