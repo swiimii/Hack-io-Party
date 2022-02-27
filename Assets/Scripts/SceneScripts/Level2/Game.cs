@@ -33,7 +33,7 @@ public class Game : LevelState
     // Update is called once per frame
     void Update()
     {
-        if (!isFailed)
+        if (!isFailed || !isWon)
         {
             if(trafficState > 0)
             {
